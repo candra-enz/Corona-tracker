@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <title>Corona</title>
+
+    <style>
+        * {
+
+            box-sizing: border-box;
+            vertical-align: baseline;
+            font-weight: inherit;
+            font-family: inherit;
+            font-style: inherit;
+            font-size: 100%;
+            border: 0 none;
+            outline: 0;
+            padding: 0;
+            margin: 0;
+
+        }
+
+        body {
+            background-color: #7C7CF3;
+        }
+
+        .container-fluid {
+            background-color: #7C7CF3;
+            width: 100%;
+        }
+
+        .container-fluid .world__stat {
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .container-fluid .title {
+            color: #F37C7C;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 40px;
+            letter-spacing: 2px;
+            line-height: 27px;
+        }
+
+        .container-fluid .world__stat .row {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 20px;
+            letter-spacing: 2px;
+            margin-left: 3px;
+        }
+
+        #image-container {
+
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+        }
+
+        #image-container .img-cover {
+            height: 290px;
+            width: 290px;
+
+
+        }
+
+        #image-container .img-cover img {
+            height: 100%;
+            width: 100%;
+        }
+
+        #negara p {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 700;
+            font-size: 29px;
+            letter-spacing: 2px;
+
+
+        }
+
+        #negara .col-4 .row .col .img-cover {
+            height: 40px;
+            width: 40%;
+
+
+        }
+
+        #negara .col-4 .row .col .img-cover img {
+
+            height: 100%;
+            width: 100%;
+        }
+
+        .data-negara p {
+            color: white;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 400;
+            font-size: 14px;
+            letter-spacing: 2px;
+
+        }
+
+        .data-negara p#nilai {
+            color: white;
+
+            font-weight: 700;
+            font-size: 24px;
+            letter-spacing: 2px;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-5 px-4  py-3">
+
+                <div class="row title mb-4">
+                    <div class="col-8">
+                        <p>World Track </p>
+                        <p>Data Covid-19</p>
+                    </div>
+                </div>
+
+
+                <div class="row ">
+<div class="world__stat">
+
+</div>
+                    <!-- <div class="row">
+                        <div class="col-4">
+                            <p>Positif</p>
+                        </div>
+                        <div class="col-4">
+                            <p>0</p>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-4">
+                            <p>Meninggal</p>
+                        </div>
+                        <div class="col-4">
+                            <p>0</p>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-4">
+                            <p>Sembuh</p>
+                        </div>
+                        <div class="col-4">
+                            <p>0</p>
+                        </div>
+                    </div>
+                     -->
+                    
+                        <form id="covidSearch" class="input-group mb-2 ">
+                            <input id="search" type="text" class="form-control" placeholder="Negara" >
+                            <div class="input-group-append">
+                                <button class="btn" type="submit" style="background-color:#E9967A ;">Cari</button>
+                            </div>
+                        </form>
+                    
+                </div>
+            </div>
+            <div id="image-container" class="col-7 px-4 py-3">
+                <div class="img-cover">
+                    <img src="/covid.png" alt="covid">
+                </div>
+
+            </div>
+
+        </div>
+        <div class="searc_result">
+            
+        </div>
+
+        <!-- <div class="content mx-1 bg-secondary">
+            <div id="negara" class="row ">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col">
+                            <P>Indonesia</P>
+                        </div>
+                        <div class="col">
+                            <div class="img-cover">
+                                <img src="/bendera.png" alt="...">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="data-negara row mx-1 mt-5 ">
+                <div class="col-2 bg-warning mr-5 rounded">
+                    <p>Positif</p>
+                    <p id="nilai">200</p>
+                </div>
+
+
+                <div class="col-2 bg-warning mr-5 rounded">
+                    <p>Aktif</p>
+                    <p id="nilai">200</p>
+                </div>
+
+                <div class="col-2 bg-warning mr-5 rounded">
+                    <p>Sembuh</p>
+                    <p id="nilai">200</p>
+                </div>
+
+                <div class="col-2 bg-warning mr-5 rounded">
+                    <p>Meninggal</p>
+                    <p id="nilai">200</p>
+                </div>
+            </div>
+
+
+
+
+
+
+        </div> -->
+
+    </div>
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    
+</body>
+
+</html>
